@@ -1,0 +1,80 @@
+
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.node-label {
+  display: flex;
+  align-items: center;
+}
+
+.node-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.node-action {
+  cursor: pointer;
+  color: #333;
+}
+
+.node-action:hover {
+  color: red;
+}
+
+.hover_node{
+  border-color:blue;
+}
+
+
+.hover_node:hover::after {
+  content: '-'; /* Use a minus sign (-) as the icon */
+  width: 20px;
+    font-size: 16px; /* Adjust font size as needed */
+    color: white; /* Adjust the color of the minus sign as needed */
+    background-color: red;
+    border-radius: 50%;
+    position: absolute; /* Position the icon absolutely within the node */
+    top: 50%; /* Adjust vertical alignment */
+    right: 10px; /* Adjust horizontal alignment */
+    transform: translateY(-50%); /* Center the icon vertically */
+}
+
+.updatenode__controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 4;
+  font-size: 12px;
+}
+
+.updatenode__controls label {
+  display: block;
+}
+
+.updatenode__bglabel {
+  margin-top: 10px;
+}
+
+.updatenode__checkboxwrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.hover_edge:hover::after {
+  content: '-'; /* Use a minus sign (-) as the icon */
+  font-size: 160px; /* Adjust font size as needed */
+  color: red; /* Adjust the color of the minus sign as needed */
+  position: absolute; /* Position the icon absolutely within the edge */
+  /* Adjust the placement of the minus sign icon as needed */
+  transform: translateX(-50%);
+}
